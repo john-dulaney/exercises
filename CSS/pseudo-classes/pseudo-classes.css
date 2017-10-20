@@ -62,14 +62,19 @@ nav{
 .block:hover{
     background-color: rosybrown;
 }
-a:link a:visited {
+/* a:link a:visited {
 color: white;
-}
+} */
 
 a:focus{
     width:200px;
-    
+
 }
+
+a:focus { 
+    padding: 0px 5px;
+}
+
 a:hover {
     color: fuchsia;
 }

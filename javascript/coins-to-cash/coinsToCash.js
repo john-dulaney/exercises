@@ -19,18 +19,5 @@ const trashWayToDoThis = pennies + dimes + nickels + quarters
 
 // Once you have given yourself a large stash of coins in your piggybank, look at each key and perform the appropriate math on the integer value to determine how much money you have in dollars. Store that value in a variable named dollarAmount.
 let dollarAmount = trashWayToDoThis
-//loops are a thing but hey we dumb
-// for (var key in piggyBank) {
-//     let currentpiggyBank = piggyBank[key];
-//         for (var i = 0; i < currentpiggyBank.length; i++) {
-//             let detail = currentpiggyBank[i];
-//             console.log(detail.dimes*10)
-//         }
-//     }
 
 console.log("I cheesed this exercise, your total is: $" + dollarAmount + ". See you on the next one where this failure to use a for loop will really hurt!")
-
-// When done, output the value to the browser console.
-
-// For example, if my piggy bank only held those pennies from above, when I type the variable name of dolllarAmount into the console, the output would be.
-

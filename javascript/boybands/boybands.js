@@ -1,25 +1,27 @@
-let bands = ["Boyz II Men", "NSync", "New Kids on the Block", "98 Degrees", "One Direction"];
-let vegetables = ["Carrots", "Kale", "Zucchini", "Broccoli", "Squash"];
+// This code spits to page and is pretty much the code I use for databases. Probably explains why detail is individual letters and not words
 
-// Get a reference to the appropriate DOM element for bands
+//B2M doesnt belong here
+let bands = ["Boyz II Men", "NSync", "New Kids on the Block", "98 Degrees", "One Direction"];
 const bandElement = document.getElementById("boy-bands");
 
-// Get a reference to the appropriate DOM element for vegetables
+// Execute a for loop that will iterate over the arrays
+for (var key in bands) {
+  const currentBand = bands[key];
+  for (var i = 0; i < currentBand.length; i++) {
+    var detail = currentBand[i];
+        bandElement.innerHTML += `${detail} `
+  }
+}
+
+// Im a fruit guy myself
+let vegetables = ["Carrots", "Kale", "Zucchini", "Broccoli", "Squash"];
 const veggieElement = document.getElementById("vegetables");
 
-// Execute a for loop that will iterate over the arrays
-for (let i = 0; i < bands.length; i += 1) {
-
-  // Get a reference to the current item in the bands array
-  const currentBand = bands[i];
-
-  // Update the innerHTML value of the DOM element for bands
-  bandElement.innerHTML += " "currentBand + " "
-
-  // Get a reference to the current item in the vegetables array
-  const currentVeggie = vegetables[i];
-
-  // Update the innerHTML value of the DOM element for vegetables
-  veggieElement.innerHTML += currentVeggie + " "
-
-}
+for (var key in vegetables) {
+  const currentVegetable = vegetables[key];
+  for (var i = 0; i < currentVegetable.length; i++) {
+    var detail = currentVegetable[i];
+        veggieElement.innerHTML +=  `${detail} `
+    }
+  
+  }

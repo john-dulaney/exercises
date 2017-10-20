@@ -2,3 +2,93 @@ li {
     display: inline;
     list-style-type: none
 }
+
+li::after {
+    content: ", "
+}
+
+span {
+display: block;
+border: 1px solid black;
+margin:25px
+}
+
+.n-child :nth-of-type(even) {
+    border: 1px dotted #FF00B3;
+}
+
+.n-type section:nth-of-type(odd){
+    color: blue;
+}
+
+.first-of-type aside:first-of-type {
+    background-color: lime;
+}
+
+.first-of-type :first-child {
+    background-color: purple;
+}
+
+.three section {
+    background-color: orange;
+}
+
+.three :first-of-type {
+    background-color: goldenrod;
+}
+
+.three :last-of-type {
+    background-color: slategray;
+}
+
+article {
+    content: "Article parent element";
+    border: 5px dashed grey;
+    background-color: royalblue;
+    width: 100%;    
+}
+
+nav{
+    background-color: #2B2B2B;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.block {
+    padding: 15px;
+    background-color: #A5A5A5;
+    margin: 15px;
+}
+.block:hover{
+    background-color: rosybrown;
+}
+a:link a:visited {
+color: white;
+}
+
+a:focus{
+    width:200px;
+    
+}
+a:hover {
+    color: fuchsia;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+
+/* // CSS Selector Excercise */
+
+/* Finished */
+header #navbar{
+    border: 1px solid goldenrod;
+    list-style-type: none; 
+    display: inline-flex;
+    padding: 10px 50px
+}
+
+#navbar li {
+    padding: 20px;
+}
+
+.disabled {
+    color: grey;
+}
+
+a .disabled {
+    color: purple;
+}
+
+a.disabled {
+    color: purple;
+}
+
+
+.active {
+    color: yellow
+}
+
+#red {
+    color: red;
+}
+
+#red + h4 {
+    background-color:red
+}
+
+#blue {
+    color: blue;
+}
+
+#blue + h4 {
+    background-color:blue
+}
+
+.grandparent > h4 {
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.promo {
+    font-weight: bold;
+    color: gold;
+}
+
+input[type="text"] {
+    font-size: 25px;
+}
+
+input[type="tel"] {
+    font-size: 25px;
+}

@@ -1,0 +1,33 @@
+#furniture {
+border: 10px solid red;
+float: left;
+background-image: url('http://netdna.webdesignerdepot.com/uploads/2008/11/bad-tiles.gif')
+}
+
+#crafts {  
+border: 12px dotted blue;
+float: center;
+background-image: url('http://68.media.tumblr.com/1f112e5613e0e26d33518db2260f5ed8/tumblr_mnill8OlkG1qfg7o3o1_r1_400.gif')
+}
+
+#electronics {
+border: 15px solid fuchsia;
+float: left;
+background-image: url('http://a.rgbimg.com/cache1qAJsz/users/x/xy/xymonau/300/n2UtdJe.jpg')
+}
+
+h2 {
+color: floralwhite;
+font-size: 50px;
+}
+
+h1 {
+font-size: 80px;
+background-image: url('http://a.rgbimg.com/cache1qAJsz/users/x/xy/xymonau/300/n2UtdJe.jpg');
+}
+
+
+
+
+
+

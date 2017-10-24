@@ -13,25 +13,37 @@ const grades = {
 
 // for loop to iterate over grades
 for (let i = 0; i < scores.length; i++) {
-    //store in variable
+    // store in variable
     let currentGrade = scores[i]
-        if (currentGrade > 90) {
-            grades.a++
-        } 
-        else if (currentGrade > 80){
-            grades.b++
+
+    switch (true) {
+        case (currentGrade > 90):
+            grades.a++ 
+        break;
+
+        case (currentGrade > 80):
+            grades.b++ 
+        break;
+
+        case (currentGrade > 70):
+            grades.c++ 
+        break;
+
+        case (currentGrade > 60):
+            grades.d++ 
+        break;
+
+        case (currentGrade > 1):
+            grades.f++ 
+        break;
+
+        default: 
+            console.log("You're a huge failure and dissapoint to your family")
+            break;
         }
-        else if (currentGrade > 70){
-            grades.c++
-        }
-        else if (currentGrade > 60){
-            grades.d++
-        }
-        else {
-            grades.f++
-        }
-    }   
-    console.log("A's = " + grades.a + " B's = " + grades.b + " C's = " + grades.c + " D's = " + grades.d + " F's =  " + grades.f)
+    }
+
+console.log("A's = " + grades.a + " B's = " + grades.b + " C's = " + grades.c + " D's = " + grades.d + " F's =  " + grades.f)
 
 
 var classIdiot = Math.min.apply(null, scores);
@@ -47,34 +59,4 @@ console.log("Smart kid: " + classNerd);
 
 
 
-// switch (grades) {
-//     case a:
-//         currentGrade > 90
-//         grades.a++ 
-//     break;
-
-//     case b:
-//        currentGrade > 80
-//         grades.b++ 
-//     break;
-
-//     case c:
-//         currentGrade > 70
-//         grades.c++ 
-//     break;
-
-//     case d:
-//         currentGrade > 60
-//         grades.d++ 
-//     break;
-
-//     case f:
-//         currentGrade > 1
-//         grades.f++ 
-//     break;
-
-//     default: 
-//         console.log("You're a huge failure and dissapoint to your family")
-//         break;
-//     }
 

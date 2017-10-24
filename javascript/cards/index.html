@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cards.css">
+    <title>Cards Exercise</title>
+</head>
+<body>
+<textarea name="How do ya want it?" id="message" cols="50" rows="25"></textarea>
+<input type="button" id="buttonEl" class="card button" value="Create">
+
+<!-- <input id='btnRemoveDummy' type="button" value="Remove DUMMY"/> -->
+
+
+        
+<div class="card" id="card">
+<div id="btn"></div>
+</div>
+
+
+<footer>
+    <script src="cards.js"></script>
+</footer>
+</body>
+</html>
+
+
+<!-- Requirements
+
+When the user enters in text into the text area and then clicks the create button, create a new card element in the DOM that includes it's own delete button. You decide the height/width of the card.
+
+When the user clicks the Delete button, the containing card, and no other cards, should then be removed from the DOM. Not just made invisible, actually removed from the DOM.
+
+
+Notes
+
+In order to know which delete button the user clicked on, each one must have a unique value in its id attribute.
+
+Remember your factory and generator functions. Generator should yield a unique identifier. Factory should generate DOM string.
+
+You can't attach an event listener to an element until it has been added to the DOM. -->

@@ -20,31 +20,28 @@ const gemMine = {
         }
 //1,812 we should end with ~90kg per after processing functions run
     }
-    // return {
-    //     "process": function (requestedMineral) {
-    //         let requestedMineral
-    //         if ( gemMine >= 5) {
-    //             processedAmt = gemMine - 5
-    //             requestedMineral++
+        return {
+            "process": function (requestedMineral) {
+                let requestedMineral
+                if ( gemMine >= 5) {
+                    gemMine -= 5
+                    requestedMineral++
                 
             }
             //something goes here function??
             
             return {
                 "mineral": requestedMineral,
-                "amount": processedAmt // Change this to the correct amount
+                "amount": gemMine // Change this to the correct amount
             }
         }
-    }
+    }   
 }
-const hello = processMin
-
-console.log(processMin)
 /*
 The SkopeManager variable represents the object with the
 `process` method on it.
 */
-const SkopeManager = gemHeapSkope()
+// const SkopeManager = gemHeapSkope()
 
 /*
 Process the gems in any order you like until there none
@@ -65,15 +62,14 @@ const storageGen = function* () {
         
     }
   }
-}
+
 // const sumValues = gemMine => Object.values(gemMine).reduce((a, b) => a + b)
 // let gemMine = {
 //     value: 5,
-    
 //     [Symbol.iterator]: function* () {
 //         for (let i = this.value; i >= 0; i-5) {
 //             yield i;
-//             if (i = 0) {    
+//             if (gemMines = 0) {    
 //                 break
 //             }
 //         }}};

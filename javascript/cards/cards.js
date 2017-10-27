@@ -1,37 +1,60 @@
+console.log("cells interlinked, interlinked")
 //Cards
 
 //set some variables
 const buttonEl = document.getElementById("card")
-const deleteID = btn
+// const deleteID = btn
 // const cardID = ""
+
+const idGenerator = function* (from) {
+    let id = 1
+    while (true) {
+        yield from + id
+        id++
+    }
+}
+    
+const lastId = 0 || { id: 0 }
+const cardGen = idGenerator(lastId.id)
+
+const articleFactory = function () {
+    return Object.create(null, {
+        "id": {
+            value: cardGen.next().value,
+            enumerable: true
+        }
+      }
+    )
+  }
 
 //insert DOM content on button press, Card class with button
 document.getElementById("buttonEl").addEventListener("click", function buttonIn(event) {
     let messageGet = document.getElementById("message").value
     buttonEl.innerHTML += `
-    <div class="cards">
+    <div class="cards" id="${cardGen}">
     <h4>${messageGet}</h4>
-    <button id="${deleteID}">Delete This Before Ex Sees It</button>
+    <button id="btn">Delete This Before Ex Sees It</button>
     <div>
     ` 
 })
-//Nowhere near baseline
-console.log("cells interlinked, interlinked")
 
-
-function deleteThis() {
-    let btn = document.getElementById('btn')
-    btn.onclick = function () {
-        document.getElementById('card').remove()
-        this.remove()
-}}
-
-// function deleteButton() {
-//     let dBtn = document.getElementById('card');
-//     dBtn.parentNode.removeChild(dBtn);
-//     return false;
-// }
-// function pageInit() {
+    
+        
+        
+// function deleteThis() {
+//     let btn = document.getElementById('btn')
+//     btn.onclick = function () {
+//         document.getElementById('card').remove()
+//         this.remove()
+// }}
+        
+        
+        // function deleteButton() {
+            //     let dBtn = document.getElementById('card');
+            //     dBtn.parentNode.removeChild(dBtn);
+            //     return false;
+            // }
+            // function pageInit() {
 //     // Hook up the "remove dummy" button
 //     let btn = document.getElementById('btnRemove');
 //     if (btn.addEventListener) {

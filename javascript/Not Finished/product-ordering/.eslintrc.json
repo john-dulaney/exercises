@@ -1,3 +1,22 @@
 {
-    "extends": "standard"
-}
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 6
+      },
+    "rules": {
+        // enable additional rules
+        "indent": [0],
+        "linebreak-style": ["error", "unix"],
+        "quotes": [0],
+        "semi": [0],
+        "const": [0],
+        "no-undef": [1],
+        "no-unused-vars": [1],  
+
+        // override default options for rules from base configurations
+        "comma-dangle": [0],
+        "no-cond-assign": ["error", "always"],
+
+        // disable rules from base configurations
+        "no-console": "off"
+    }}

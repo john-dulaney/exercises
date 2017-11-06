@@ -1,0 +1,158 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+console.log("cells within cells interlinked, INTERLINKED")
+
+// One module contains the product information (i.e. productFactory)
+const productFactory = require("./prod-factory.js")
+// One module displays the product information (i.e. product Controller)
+const productController = require("./prod-controller.js")
+// One module builds the navigation bar
+const navBar = require("./navbar.js")
+// One module contains the review information (i.e. reviewFactory)
+const reviewFactory = require("./rev-factory.js")
+// One module displays the review information (i.e. reviewController)
+const reviewController = require("./rev-controller.js")
+
+
+
+},{"./navbar.js":2,"./prod-controller.js":3,"./prod-factory.js":4,"./rev-controller.js":5,"./rev-factory.js":6}],2:[function(require,module,exports){
+// One module builds the navigation bar
+
+
+
+const navEl = document.getElementsByClassName("navList")[0]
+
+navigation.forEach(el => {
+
+    // Create a new `li`
+    const newItem = document.createElement("li")
+
+
+    // Add a class to the `li`
+    newItem.className = "navList__link"
+
+    // Create an `a` tag as a child of the `li`
+    const newLink = document.createElement("a")
+        newLink.href = "#"
+        newLink.className = `navList__link--${el.display.toLowerCase()}`
+        newLink.appendChild(document.createTextNode(el.display))
+
+    // When any section is clicked
+    newLink.addEventListener("click", e => {
+        const sectionName = e.target.className.split("--")[1]
+        const sectionEl = document.getElementById(sectionName)
+
+        // Add `hidden` class to all main sections
+        Array.from(document.getElementsByClassName("mainSection"))
+            .forEach(
+                section =>
+                    section.classList.add("hidden")
+            )
+
+        // Then remove it from the one the user clicked on
+        sectionEl.classList.remove("hidden")
+    })
+
+    newItem.appendChild(newLink)
+
+    // Add `li` to the navigation `ul`
+    navEl.appendChild(newItem);
+})
+
+
+
+
+
+// modules.exports = 
+
+},{}],3:[function(require,module,exports){
+// One module displays the product information (i.e. product Controller)
+
+
+
+// modules.exports = 
+},{}],4:[function(require,module,exports){
+//One module contains the product information (i.e. productFactory)
+
+//Unique ID generation
+const idMaker = function* (startFrom = 0){
+    let id=1
+    while(true){
+        yield id + startFrom
+        id++
+    }
+}
+const idGenerator = idMaker()
+
+
+// Product information ------ description title price quantity image
+const productFactory = (title, description, price, quantity, image) => {
+    return Object.create(null, {
+        "id":{
+            value: idGenerator.next().value,
+            enumerable: true
+        },
+        "title":{
+            value: title,
+            enumerable: true
+        },
+        "description":{
+            value: description,
+            enumerable: true
+        },
+        "price":{
+            valu: price,
+            enumerable: true
+        },
+        "quantity":{
+            value: quantity,
+            enumerable: true
+        },
+        "image":{
+            value: image,
+            enumerable: true 
+            }
+        }
+    )
+}
+
+productFactory()
+
+
+
+// modules.exports = 
+
+
+
+
+
+
+
+            // value: function(milesToDestination){
+            //     const check = 5
+            //     let milesTraveled = 0
+            //     let currentRange = this.currentRange
+            //     do {
+            //         if (this.currentRange > 0) {
+            //             this.currentRange -= check
+            //         } else {
+            //         gasStation.fillUp(this)
+            //             }
+            //     milesTraveled += check
+            //     } while (milesTraveled < milesToDestination)
+                    
+},{}],5:[function(require,module,exports){
+// One module displays the review information (i.e. reviewController)
+
+
+
+
+
+// modules.exports = 
+},{}],6:[function(require,module,exports){
+// One module contains the review information (i.e. reviewFactory)
+
+
+
+
+// modules.exports = 
+},{}]},{},[1,2,3,4,5,6]);

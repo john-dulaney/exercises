@@ -13,23 +13,39 @@ module.exports = function(grunt) {
                 }
             },
             eslint: {
-                target: [ './scripts/*.js']
+                src: [ './scripts/*.js']
+            },
+            uglify: {
+                options: {
+                    banner: "/*! <%= pkg.name %> <%= grunt.template.today('yyyy-mm-dd') %> */\n"
+                },
+                build: {
+                    files: [{
+                        expand: true,
+                        cwd: "build",
+                        src: "bundle.js",
+                        dest: "build",
+                        ext: ".min.js"
+                    }]
+                }
             }, 
             browserify: {
-                all: [ './scripts/*.js']    
-              },
-            uglify: {
-                all: [ './scripts/*.js']    
-              },
-            })
+                dist: {
+                    files: {
+                        "build/bundle.js": ["scripts/main.js"]
+                    }
+                }
+            },
+          })
+        
             
         // Load the plugin that provides the "uglify" task.
         grunt.loadNpmTasks('grunt-contrib-watch');
+        grunt.loadNpmTasks('grunt-contrib-uglify');
         grunt.loadNpmTasks('grunt-eslint');
         grunt.loadNpmTasks('grunt-browserify');
-        grunt.loadNpmTasks('grunt-contrib-uglify');
         
         // Default task(s).
-        grunt.registerTask('default', ['browserify', 'eslint', 'uglify', 'watch']);
+        grunt.registerTask('default', ['eslint', 'uglify', 'browserify', 'watch']);
     
     };

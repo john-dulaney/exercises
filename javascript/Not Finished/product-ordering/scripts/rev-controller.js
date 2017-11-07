@@ -1,5 +1,5 @@
-// One module displays the review information (i.e. reviewController)
-
+//import review for use
+const reviewFactory = require("./rev-factory.js")
 
 
 

@@ -1,5 +1,5 @@
 //One module contains the product information (i.e. productFactory)
-
+const productFactory = function (dsaf){
 //Unique ID generation
 const idMaker = function* (startFrom = 0){
     let id=1
@@ -42,7 +42,7 @@ const productFactory = (title, description, price, quantity, image) => {
     )
 }
 
-productFactory()
+}
 
 
 

@@ -1,0 +1,39 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    background-color: blueviolet
+}
+
+a {
+    color: white;
+}
+
+section {
+    display: block;
+    margin-top: 100px;
+    background-color: pink;
+}
+
+/* stolen from steve */
+.navList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navList__link {
+    display: inline;
+}
+
+.navList__link:first-child {
+    margin: 0 20px 0 0;
+}
+
+.navList__link:not(:first-child) {
+    margin: 0 20px;
+}

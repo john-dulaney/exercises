@@ -1,4 +1,4 @@
-console.log("cells within cells interlinked, INTERLINKED")
+console.log("main up")
 
 // One module contains the product information (i.e. productFactory)
 const productFactory = require("./prod-factory.js")

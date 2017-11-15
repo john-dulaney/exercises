@@ -12,6 +12,18 @@ const coins = {
     "pennies": .01
 }
 
+
+
+// Jared's way
+// piggyBank = all the coins as 0 objects
+// multiply the amounts by 100 to get rid of decimals
+// while (dollarAmount != 0) {
+//     if (dollarAmount >= 25)
+//         dollarAmount -= 25
+//         piggyBank.quarters +=1
+// }
+
+
 //number getting math'd upon being var'd to dollarAmount
 let currencyAmount = dollarAmount;
 for(let key in coins) {

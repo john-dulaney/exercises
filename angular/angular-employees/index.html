@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ayyngular</title>
+</head>
+
+<body ng-app="EmployeeMngmt">
+  <section ng-controller="EmployeeCtrl">
+    <h1>{{ title }}</h1>
+
+    <form class="hire" ng-submit="addEmployee(employee, key)">
+      First Name: <input type="text" ng-model="firstName"> Last Name: <input type="text" ng-model="lastName">
+      <button ng-submit="addEmployee(employee, key)">Hire!</button>
+    </form>
+
+    <ul ng-repeat="(key, employee) in employees">
+        <!-- ng-if="employee.employmentEnd === 0" -->
+      <li ng-if="employee.employmentEnd === 0">{{ employee.firstName }} {{ employee.lastName}}
+        <button ng-click="killEmployee(employee, key)">Fix the Glitch</button>
+      </li>
+    </ul>
+
+  </section>
+
+
+  <script src="lib/node_modules/angular/angular.min.js"></script>
+  <script src="./app/EmployeeCtrl.js"></script>
+</body>
+
+</html>

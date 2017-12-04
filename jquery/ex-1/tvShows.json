@@ -1,0 +1,25 @@
+{
+    "tvShows": [
+        {
+            "title": "The Sopranos",
+            "genre": "crime drama",
+            "channel": "HBO"
+        },
+        {
+            "title": "Stranger Things",
+            "genre": "mystery",
+            "channel": "Netflix"
+        },
+        {
+            "title": "Family Guy",
+            "genre": "comedy",
+            "channel": "Fox"
+        },
+        {
+            "title": "Breaking Bad",
+            "genre": "drama",
+            "channel": "AMC"
+        }
+  
+    ]
+}

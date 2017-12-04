@@ -1,0 +1,2 @@
+4. When that button is clicked, change the value of the employmentEnd property of that employee to Date.now().
+5. Ensure that only current employees are displayed in the DOM.

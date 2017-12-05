@@ -5,5 +5,6 @@ angular
 
         EmployeeFactory.list(true).then(data => {
             $scope.employees = data
+            console.log(data)
         })
     })

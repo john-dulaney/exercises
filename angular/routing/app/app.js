@@ -1,4 +1,4 @@
-const app = angular.module("EmployeeApp", require('angular-route'))   
+const app = angular.module("EmployeeApp", ['ngRoute']) 
 
 angular.module("EmployeeApp").config(function ($routeProvider) {
     /**

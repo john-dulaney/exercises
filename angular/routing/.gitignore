@@ -5,3 +5,5 @@ build
 Gruntfile.js
 package-lock.json
 package.json
+app/app.config.js
+app.config.js   

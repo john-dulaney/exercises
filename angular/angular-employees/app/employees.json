@@ -1,9 +1,26 @@
-[{
-    "employees": {
-        "id": 6,
-        "firstName": "Milton",
-        "lastName": "Waddams",
-        "employmentStart": 1512200192935,
-        "employmentEnd": null
-    }
-}]
+[
+{
+    "employmentStart": 1512200192935,
+    "firstName": "Milton",
+    "id": 1,
+    "lastName": "Waddams"
+}
+{
+    "employmentStart": 1512200192932,
+    "firstName": "John",
+    "id": 2,
+    "lastName": "Dulaney"
+}
+{
+    "employmentStart": 1512200192936,
+    "firstName": "Ayy",
+    "id": 3,
+    "lastName": "Macarena"
+}
+{
+    "employmentStart": 15122001929357,
+    "firstName": "Ham",
+    "id": 4,
+    "lastName": "Sandwhich"
+}
+]
